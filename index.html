@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="" method="get" class="form_div" >
+    <div class="form_div">
+      <label for="f_name">First Name</label>
+      <input type="text" placeholder="" id="f_name">
+      
+    </div>
+    <div class="form_div">
+      <label for="l_name">Last Name</label>
+      <input type="text" placeholder="" id="l_name">
+     <!--<div class="error-message-fname"></div>-->
+    </div>
+    <div class="form_div">
+      <label for="interest">Area of Interest</label>
+      <select name="Area of interest" id="interest" value="" name="area_of_intrest">
+        <option value="" ></option>
+        <option value="cricket" >cricket</option>
+        <option value="fooball">football</option>
+        <option value="basketball">basketball</option>
+        <option value="tennis">tennis</option>
+        <option value="volleyball">volleyball</option>
+        <option value="shuttle">shuttle</option>
+      </select>
+    </div>
+    <div class="form_div">
+      <input type="radio" id="terms">
+      <label for="terms" >I AGREE TO THE TERMS AND CONDITIONS</label>
+    </div>
+    <div class="form_btn">
+      <button type="submit" id="submit" value="submit" onclick="validate();">SUBMIT</button>
+    </div>
+  </form>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
