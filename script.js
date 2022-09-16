@@ -1,52 +1,48 @@
 function validate() {
 
+    let namePattern = /^[a-zA-Z]+[a-zA-Z]+$/;
+    let firstName = document.getElementById('f_name').value;
+    let lastName = document.getElementById('l_name').value;
+    let usersInterest = document.getElementById('interest').value;
+    let termsRadio = document.getElementById('terms');
 
-    let regName = /^[a-zA-Z]+[a-zA-Z]+$/;
-    let fi_name = document.getElementById('f_name').value;
-    let li_name = document.getElementById('l_name').value;
-    let user_interest = document.getElementById('interest').value;
-    let radio_button=document.getElementById('terms');
-    if(!(regName.test(fi_name)||regName.test(li_name)||regName.test(user_interest))){
+    /* Checks for empty form */     
+    if(!(namePattern.test(firstName)||namePattern.test(lastName)||namePattern.test(usersInterest))){
         alert('Please fill the form');
         return false;
     }
-    if(!regName.test(fi_name)){
+
+    /* Checks for first name validation */
+    if(!namePattern.test(firstName)) {
         alert('Please enter your First name.');
         return false;
     }
-    else if(fi_name.length<=3){
+    /* Checks for the first name length to be more than 3 */
+    else if(firstName.length<=3) {
         alert('The First Name length must be above 6 characters.');
         return false;
     }
-    if(!regName.test(li_name)){
+    /* Checks for last name validation */
+    if(!namePattern.test(lastName)){
         alert('Please enter your Last name.');
         return false;
     }
-    else if(li_name.length<=3){
+    /* Checks for the last name length to be more than 3 */
+    else if(lastName.length<=3){
         alert('The Last Name length must be above 6 characters.');
         return false;
     }
-    if(!regName.test(user_interest)){
+    /* Checks whether the user selected an option */
+    if(!namePattern.test(usersInterest)){
         alert('Please select a valid option');
         return false;
     }
-    if(!radio_button.checked){
+    /* Checks whether the terms and conditions are agreed */
+    if(!termsRadio.checked){
         alert("Select the Terms and Conditions.");
         return false;
     }
     alert('Submitted');
-    return true;
-    
+    return true;    
 }
 
-
-
-/*
-Scoping
-Hoisting 
-Functional scope
-Global scope
-Lexical scope
-Block level scope
-
-Closures*/
